@@ -1,12 +1,14 @@
 .kwitnie  {
     background-color: orange;
     fill:#76007F;
+   
+}
+.wojewodztwo {
+    stroke:#FFFFFF;
+    stroke-width:3;
 }
 .kwitniefull {
     background-color: orangered;
-}
-.niekwitnie {
-    background-color: white;
 }
 .sliderContainer{
     width: 100%;
@@ -14,10 +16,11 @@
 .slider {
     width: 50%;
     height: 30px;
+    background-color: red;
 }
 /* MAP styles */
 #mapSvg {
-    width: 70%;
+    width: 50%;
 }
 .st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
 .st1{fill:#000074;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}

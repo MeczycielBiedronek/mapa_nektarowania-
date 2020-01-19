@@ -1,0 +1,25 @@
+{
+  "name": "mapa_nektarowania-",
+  "version": "1.0.0",
+  "description": "Mapa nektarowania i pozytkow pszczelich w Polsce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeczycielBiedronek/mapa_nektarowania-.git"
+  },
+  "keywords": [
+    "mapa"
+  ],
+  "author": "JohnFistah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MeczycielBiedronek/mapa_nektarowania-/issues"
+  },
+  "homepage": "https://github.com/MeczycielBiedronek/mapa_nektarowania-#readme",
+  "dependencies": {
+    "import-modules": "^2.0.0"
+  }
+}
