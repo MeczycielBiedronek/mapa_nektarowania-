@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<script src="https://kit.fontawesome.com/5dc2157150.js" crossorigin="anonymous"></script>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="style.css">
     <title>Pozytki pszczele w Polsce</title>
 </head>
 <body>
 	<aside>
+		<!-- Navigation -->
 		<nav>
 			<div class="navButton">
 				<a href="#">
@@ -28,10 +29,50 @@
 					</div>
 			</div>
 		</nav>
+		
+		<!-- Header -->
+		<header>
+			<h1>
+				Mapa pożytków 
+pszczelich <span>ver.1.0</span>
+			</h1>
+		</header>
+		<article>
+			<h2>Lipa</h2> (Tilia) – rodzaj długowiecznych drzew należący do podrodziny lipowatych. Rosną w umiarkowanej strefie półkuli północnej. 
+		</article>
+		<div class="charts">
+			<p>Wydajność miodowa</p>
+			<div class="chartBcg">
+				<div id="chartP1" class="chartBar">
+					30kg/h
+				</div>
+			</div>
+
+			<p>Wydajność pyłkowa</p>
+			<div class="chartBcg">
+				<div id="chartP2" class="chartBar">
+					30kg/h
+				</div>
+			</div>
+
+			<p>Długość kwitnienia</p>
+			<div class="chartBcg">
+				<div id="chartP3" class="chartBar">
+					12 dni
+				</div>
+			</div>
+		</div>
+		<article>
+			<button class="mainButton">Wybierz pożytek 
+				<i class="fas fa-chevron-circle-down"></i>
+			</button>
+		</article>
+		
+
 			<select id="plantSelect">
 				<option value="robinia">Robinia akacjowa</option>
 				<option value="lipa">Lipa</option>
-			</select>
+			</select> 
 			<div class="sliderContainer">
 				<div class="odcinek"></div>
 				<input type="range" id="timeSelect" name="timeSelect" 
@@ -41,6 +82,7 @@
 			<div class="showTime">
 			</div>
 	</aside>
+
 	<main>
 		<svg
 		id="mapSvg" sodipodi:version="0.32" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="#" xmlns:svg="http://www.w3.org/2000/svg"
