@@ -29,6 +29,10 @@ main {
     align-items: center;
     justify-content: center;
 }
+.charts {
+    position: relative;
+    z-index: 110;
+}
 .charts p {
     font-weight: 700;
     font-size: .8rem;
@@ -143,12 +147,41 @@ nav .fbicon {
 }
 .timeSelectButton {
     min-width: 70%;
+    display: inline-flex;
 }
 
 .plantSelectButton:hover, .timeSelectButton:hover{
     background-color: #E2E2E2;
 }
+.plantSelectButton:focus {
+    border: 2px solid #0d0d0d;
+}
+.plantSelectButton:focus .plantSelector {
+    visibility: visible;
+}
 
+
+.slider {
+    
+    border: 2px solid #0d0d0d;
+    width: 0px;
+    height: 30px;
+    visibility: hidden; 
+}
+#timeSelect{
+    
+}
+.timeSelectButton:focus {
+    border: 2px solid #0d0d0d;
+}
+.timeSelectButton:hover .slider, .timeSelectButton:focus .slider{ 
+    width: 530px;
+    visibility: visible; 
+
+}
+input:focus {
+    background-color: red;
+}
 
 .plantSelectButton i {
     position: relative;
@@ -172,6 +205,7 @@ nav .fbicon {
     width: 100vw;
     height: 100vh;
     z-index: 100;
+    cursor: default;
 }
 .plantSelector ul {
     overflow-y: scroll;
@@ -239,11 +273,7 @@ stroke-width:3;
     position: absolute;
     z-index: -1;
 } */
-.slider {
-    width: 530px;
-    margin: 7px 10px 0 10px;
-    background-color: red;
-}
+
 /* MAP styles */
 #mapSvg {
     height: 90vh;
@@ -256,16 +286,10 @@ Do wywalenia
 #plantSelect {
     visibility: hidden;
 }
-#timeSelect{
-    width: 0px;
-    height: 0px;
-    visibility: hidden;
-    
-    
-}
+
 
 .timeSelectButton {
-    display: inline-flex;
+    
 }
 .showTime {
     width:160px;
