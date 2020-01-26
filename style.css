@@ -10,6 +10,7 @@ aside {
     -webkit-box-shadow: 5px 0px 30px 0px rgba(0,0,0,0.14);
     -moz-box-shadow: 5px 0px 30px 0px rgba(0,0,0,0.14);
     box-shadow: 5px 0px 30px 0px rgba(0,0,0,0.14);
+    z-index: 5;
 }
 h1 {
     font-size: 2.2rem;
@@ -40,7 +41,7 @@ main {
     margin-bottom: 6px;
 }
 .chartBar {
-    background-color: #0d0d0d;
+    background-color: rgba(0,0,0,0.7);
     height: 100%;
     color: white;
     font-size: .8rem;
@@ -121,54 +122,111 @@ nav .fbicon {
     font-size: 0.6rem;
 }
 
-.mainButton {
-    width: 100%;
-    height: 2rem;
+.plantSelectButton, .timeSelectButton {
+    height: 3rem;
     font-size: 1.2rem;
     font-family: inherit;
     font-weight: 500;
     background-color: white;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    border-radius: 1rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    border-radius: 1.5rem;
     padding: 0;
     border: 1px solid #0d0d0d;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    
-    
-    
+    cursor: pointer;
 }
-.mainButton:active{
-/* background-color: #E2E2E2; */
-position: absolute;
-top: 50px;
-height: 90vh;
-width: 330px;
+.plantSelectButton {
+    width: 100%;
 }
-.mainButton i {
-    padding-left: 20px;
-    
+.timeSelectButton {
+    min-width: 70%;
 }
-.mainButton:hover i {
-    
+
+.plantSelectButton:hover, .timeSelectButton:hover{
+    background-color: #E2E2E2;
 }
 
 
-
+.plantSelectButton i {
+    position: relative;
+    bottom: 3px;
+    left: 40px;
+}
+.timeSelectButton i {
+    padding: 5px 5px 0px 5px;
+}
+.timeSelectButton span {
+    padding-left: 0px;
+}
+.plantSelector{
+    visibility: hidden;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    font-size: 1.2rem;
+    font-weight: 500;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+.plantSelector ul {
+    overflow-y: scroll;
+    position: relative;
+    background-color: white;
+    border: 1px solid #0d0d0d;
+    top: 10vh;
+    height: 80vh;
+    width: 320px;
+    left: 370px;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+    /* text-align: center; */
+    margin: 0;
+    padding-inline-start: 0px;
+    padding: 10px 20px;
+}
+.plantSelector ul::-webkit-scrollbar {
+    width: .5em;
+    
+}
+.plantSelector ul::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px;
+    margin: 10px;
+}
+.plantSelector ul::-webkit-scrollbar-thumb {
+    background-color: black;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+  }
+.plantSelector ul li{
+    margin: 0em;
+    padding: 0em;
+    list-style: none;
+    cursor: pointer;
+}
+.plantSelector ul li:hover{
+    font-weight: 700;
+}
 
 .kwitnie  {
     fill:#FECD05;
+    /* stroke:black; */
    
 }
-.wojewodztwo {
-    stroke:#FFFFFF;
-    stroke-width:3;
-    /* fill:#0375B4; */
+svg {
+fill:rgba(0,0,0,0.6);
+stroke:#FFFFFF;
+stroke-width:3;
 }
 .kwitniefull {
     background-color: orangered;
+    
 }
 .sliderContainer{
     width: 100%;
@@ -182,8 +240,8 @@ width: 330px;
     z-index: -1;
 } */
 .slider {
-    width: 730px;
-    height: 30px;
+    width: 530px;
+    margin: 7px 10px 0 10px;
     background-color: red;
 }
 /* MAP styles */
@@ -191,4 +249,25 @@ width: 330px;
     height: 90vh;
 }
 
+/* 
+Do wywalenia 
+*/
 
+#plantSelect {
+    visibility: hidden;
+}
+#timeSelect{
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    
+    
+}
+
+.timeSelectButton {
+    display: inline-flex;
+}
+.showTime {
+    width:160px;
+
+}
