@@ -145,9 +145,35 @@ nav .fbicon {
 .plantSelectButton {
     width: 100%;
 }
+
+.timewrap {
+    position: relative;
+}
+
+.play{
+    line-height: 2rem;
+    position: absolute;
+    font-size: 2.9rem;
+    top: 1px;
+    left: 258px;
+    z-index: 50;
+}
+.play-off {
+    display: none;
+}
+.play:hover .play-on {
+    display: none;
+}
+.play:hover .play-off {
+    display: inline;
+}
+
 .timeSelectButton {
+    position: relative;
     min-width: 70%;
     display: inline-flex;
+    z-index: 100;
+    
 }
 
 .plantSelectButton:hover, .timeSelectButton:hover{
@@ -175,7 +201,7 @@ nav .fbicon {
     border: 2px solid #0d0d0d;
 }
 .timeSelectButton:hover .slider, .timeSelectButton:focus .slider{ 
-    width: 530px;
+    width: 330px;
     visibility: visible; 
 
 }
@@ -189,7 +215,7 @@ input:focus {
     left: 40px;
 }
 .timeSelectButton i {
-    padding: 5px 5px 0px 5px;
+    padding: 7px 15px 0px 5px;
 }
 .timeSelectButton span {
     padding-left: 0px;
@@ -279,10 +305,6 @@ stroke-width:3;
     height: 90vh;
 }
 
-/* 
-Do wywalenia 
-*/
-
 #plantSelect {
     visibility: hidden;
 }
@@ -292,6 +314,9 @@ Do wywalenia
     
 }
 .showTime {
-    width:160px;
+    padding-top: 2px;
+    margin-right: 10px;
+    width:170px;
+    text-align: right;
 
 }

@@ -37,7 +37,7 @@ const day = Math.floor(diff / oneDay);
 // Konwersja na datę
 
 let trM = [0, 31, 31+28, 31+31+28, 30+31+31+28, 31+30+31+31+28, 30+31+30+31+31+28, 31+30+31+30+31+31+28, 31+31+30+31+30+31+31+28, 30+31+31+30+31+30+31+31+28, 31+30+31+31+30+31+30+31+31+28, 30+31+30+31+31+30+31+30+31+31+28, 31+30+31+30+31+31+30+31+30+31+31+28];
-let mieArr = [null, 'Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopadk', 'Grudzień']  
+let mieArr = [null, 'Stycznia', 'Lutego', 'Marca', 'Kwietnia', 'Maja', 'Czerwca', 'Lipca', 'Sierpnia', 'Września', 'Października', 'Listopada', 'Grudnia']  
 // rok przestępny
 if (now.getYear() == 120 || now.getYear() == 124 || now.getYear() == 128 || now.getYear() == 132 || now.getYear() == 136 || now.getYear() == 140) 
 {
@@ -66,7 +66,7 @@ const presentTime = () => {
             mie = mieArr[i+1];
         }
     }
-    showTime.innerHTML = `${dzi} ${mie}.`
+    showTime.innerHTML = `${dzi} ${mie}`
 }
 
 
